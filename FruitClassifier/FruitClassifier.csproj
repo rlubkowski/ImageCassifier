@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Images\Fruits.png" />
+    <None Remove="Assets\Images\SplashScreen.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Images\Fruits.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="2.0.0-alpha0748" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="3.7.0" />
+    <PackageReference Include="Microsoft.ML" Version="1.5.0-preview2" />
+    <PackageReference Include="Microsoft.ML.ImageAnalytics" Version="1.5.0-preview2" />
+    <PackageReference Include="Microsoft.ML.TensorFlow" Version="1.5.0-preview2" />
+    <PackageReference Include="Microsoft.ML.Vision" Version="1.5.0-preview2" />
+    <PackageReference Include="Ookii.Dialogs.Wpf.NETCore" Version="2.1.0" />
+    <PackageReference Include="SciSharp.TensorFlow.Redist" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SplashScreen Include="Assets\Images\SplashScreen.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Assets\MLModel\MLModel.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
